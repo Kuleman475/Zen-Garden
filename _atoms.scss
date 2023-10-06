@@ -45,3 +45,10 @@ p{
     font-size: 28px;
     font-family: $paragraph-font;
 }
+a {
+ @include center(50%);
+ font-size: 28px;
+}
+ a:hover{
+    background-color: $color-complement-0;
+    }

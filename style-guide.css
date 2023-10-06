@@ -53,4 +53,29 @@ p {
   font-family: myFirstFont;
 }
 
+a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  font-size: 28px;
+}
+
+a:hover {
+  background-color: #FF9200;
+}
+
+div {
+  border-style: solid;
+  padding: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 33%;
+}
+
+#heading1 {
+  background-color: #7FA7C6;
+}
+
 /*# sourceMappingURL=style-guide.css.map */
