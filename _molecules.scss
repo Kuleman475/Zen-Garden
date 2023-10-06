@@ -1,0 +1,13 @@
+@use 'variables';
+@use 'atoms';
+
+div {
+    border-style: solid;
+    padding: 5px;
+    @include atoms.center(33%);
+
+
+}
+        #heading1 {
+        background-color: variables.$color-primary-1;
+        }
