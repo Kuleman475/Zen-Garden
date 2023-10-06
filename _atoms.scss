@@ -1,0 +1,47 @@
+@use 'variables' as *;
+
+@mixin center($width){
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: $width;
+}
+
+h1 {
+    
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+body {
+    background-color: $color-primary-0;
+}
+header {
+    background-color: $color-primary-1;
+    padding: 5px;
+    @include center(80%);
+}
+main {
+    background-color: $color-complement-1;
+    @include center(80%);
+}
+img {
+    @include center(50%);
+}
+
+h1, h2, h3 {
+    font-family: $heading-font;
+    text-align: center;
+}
+h2 {
+    font-size: 50px;
+}
+h3 {
+    font-size: 35px;
+}
+p{
+    text-align: center;
+    font-size: 28px;
+    font-family: $paragraph-font;
+}

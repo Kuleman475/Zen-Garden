@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Waterfall&display=swap');
+@import url('sansation_light.woff');
+
 // As hex codes */
 
 // Main Body color */
@@ -14,3 +17,10 @@ $color-complement-1: #FFD59D;
 $color-complement-2: #B46700;
 $color-complement-3: #FFFFFF;
 $color-complement-4: #000000;
+
+// Fonts
+//Headings
+$heading-font: 'Waterfall', cursive;
+
+//Paragraphs
+$paragraph-font: myFirstFont;
