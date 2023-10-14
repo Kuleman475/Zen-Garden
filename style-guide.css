@@ -12,8 +12,10 @@ h1 {
   font-weight: 900;
 }
 
-body {
-  background-color: #0B80DB;
+body {	
+	background: linear-gradient(to bottom, #0b80db, #7fa7c6, #014274);
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 header {
