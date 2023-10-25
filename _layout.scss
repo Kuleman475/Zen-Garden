@@ -1,0 +1,50 @@
+// layout for the introduction
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100px 1fr;
+}
+.preamble {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    align-self: start;
+}
+.summary {
+    grid-column-start: 1;
+}
+
+
+#zen-supporting {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr1fr 1fr 1fr 2fr;
+    overflow: hidden;
+}
+.explanation{
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+.participation {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    padding-bottom: 150px;
+}
+.benefits {
+    grid-column-start: 1;
+    grid-row-start: 4;
+}
+.requirements {
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+footer {
+    grid-column-start: 2;
+    grid-row-start: 5;
+}
+
+.wrapper {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
