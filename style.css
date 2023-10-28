@@ -1,37 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Waterfall&display=swap");
 @import url("sansation_light.woff");
-.intro {
+.preamble {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100px 100px 1fr;
 }
-
-.preamble {
-  grid-row-start: 3;
+.preamble p, .preamble h3 {
   grid-column-start: 2;
-  align-self: start;
 }
 
 .summary {
   grid-column-start: 1;
 }
 
-#zen-supporting {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr1fr 1fr 1fr 2fr;
-  overflow: hidden;
-}
-
 .explanation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.explanation p, .explanation h3 {
   grid-column-start: 1;
-  grid-row-start: 1;
 }
 
 .participation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.participation p, .participation h3 {
   grid-column-start: 2;
-  grid-row-start: 2;
-  padding-bottom: 150px;
 }
 
 .benefits {
@@ -40,8 +34,11 @@
 }
 
 .requirements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.requirements p, .requirements h3 {
   grid-column-start: 2;
-  grid-row-start: 4;
 }
 
 footer {
@@ -54,6 +51,18 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
+}
+
+.preamble {
+  background-image: url(palm-tree.svg);
+  background-repeat: no-repeat;
+  background-position-x: 20%;
+}
+
+.explanation {
+  background-image: url(seashell.svg);
+  background-position: 80%;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */
