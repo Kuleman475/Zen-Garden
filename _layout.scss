@@ -6,6 +6,13 @@
         grid-column-start: 2;
     }
 }
+@mixin right() {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+p, h3 {
+    grid-column-start: 1;
+}
+}
 // layout for the introduction
 
 .preamble {
@@ -15,13 +22,13 @@
 .summary {
     grid-column-start: 1;
 }
-
+// #zen-supporting {
+//     display: grid;
+//     grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+//     overflow: hidden;
+// }
 .explanation{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    p, h3 {
-        grid-column-start: 1;
-    }
+@include right;
 }
 .participation {
     @include left;
@@ -31,7 +38,7 @@
     grid-row-start: 4;
 }
 .requirements {
-    @include left;
+    @include right;
 }
 footer {
     grid-column-start: 2;

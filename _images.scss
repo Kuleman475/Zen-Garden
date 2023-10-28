@@ -1,11 +1,60 @@
+@use 'variables' as *;
+
 .preamble {
     background-image: url(palm-tree.svg);
     background-repeat: no-repeat;
-    background-position-x: 20%;
+    background-position-x: 18%;
 }
 
 .explanation {
     background-image: url(seashell.svg);
-    background-position: 80%;
+    background-position-x: 80%;
     background-repeat: no-repeat;
 }
+.participation {
+    background-image: url(Ship.svg);
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position: 15% 100%;
+    p, h3 {
+        animation: none;
+    }
+      animation:  rocking 25s linear infinite;
+}
+.requirements {
+    background-image: url(treasure-chest.svg);
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+}
+
+@keyframes rocking {
+    0% {background-position: 0% 100%;}
+    5%{background-position-y: 0%;}
+    10%{background-position-y: 100%;}
+    15%{background-position-y: 0%;}
+    20%{background-position-y: 100%;}
+    25% {background-position: 20% 0%;}
+    30%{background-position-y: 100%;}
+    35%{background-position-y: 0%;}
+    40%{background-position-y: 100%;}
+    45%{background-position-y: 0%;}
+    50% {background-position: 40% 100%; }
+    55%{background-position-y: 0%;}
+    60%{background-position-y: 100%;}
+    65%{background-position-y: 0%;}
+    70%{background-position-y: 100%;}
+    75% {background-position: 20% 0%;}
+    80%{background-position-y: 100%;}
+    85%{background-position-y: 0%;}
+    90%{background-position-y: 100%;}
+    95%{background-position-y: 0%;}
+    100% {background-position: 0% 100%;}
+}
+
+// @keyframes rocking {
+//      0% {transform: rotate(0deg);}
+//      25% {transform: rotate(20deg);}
+//      50% {transform: rotate(0deg)}
+//      75% {transform: rotate(-20deg);}
+//      100% {transform: rotate(0deg);}
+// }
