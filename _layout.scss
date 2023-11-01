@@ -1,41 +1,44 @@
-// layout for the introduction
-.intro {
+
+@mixin left() {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 100px 1fr;
+    p, h3{
+        grid-column-start: 2;
+    }
 }
+@mixin right() {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+p, h3 {
+    grid-column-start: 1;
+}
+}
+// layout for the introduction
+
 .preamble {
-    grid-row-start: 3;
-    grid-column-start: 2;
-    align-self: start;
+@include left;
 }
+
 .summary {
     grid-column-start: 1;
 }
-
-
-#zen-supporting {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr1fr 1fr 1fr 2fr;
-    overflow: hidden;
-}
+// #zen-supporting {
+//     display: grid;
+//     grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+//     overflow: hidden;
+// }
 .explanation{
-    grid-column-start: 1;
-    grid-row-start: 1;
+@include right;
 }
 .participation {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    padding-bottom: 150px;
+    @include left;
 }
 .benefits {
     grid-column-start: 1;
     grid-row-start: 4;
 }
 .requirements {
-    grid-column-start: 2;
-    grid-row-start: 4;
+    @include right;
 }
 footer {
     grid-column-start: 2;
@@ -48,3 +51,4 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
 }
+
