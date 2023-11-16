@@ -1,20 +1,87 @@
 @import url("https://fonts.googleapis.com/css2?family=Waterfall&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 @import url("sansation_light.woff");
-.preamble {
+
+/** {
+  display: block;
+  padding: 1rem;
+}
+
+/** {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  /*grid-template-areas: 
+    intro intro intro
+    sidebar tree explanation
+    sidebar participation shell
+    sidebar ship benefits
+    sidebar requirements chest
+    footer footer footer
+    design-selection design-archives zen-resources
+    extra1 extra1 extra1
+    extra4 extra4 extra4
+  ;
+}*/
+
+body {	
+	background: linear-gradient(to bottom, #0b80db, #7fa7c6, #014274);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+h1, h2, h3 {
+  font-family: "Waterfall", cursive;
+  text-align: center;
+}
+
+h1 {
+  font-size: 80px;
+}
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+a, p {
+  text-align: center;
+  font-size: 20px;
+  font-family: Prata;
+}
+
+.intro {
+  /*display: grid;*/
+  grid-area: intro;
+}
+
+.summary {
+  display: grid;
+  grid-column-start: 1;
+  grid-area: summary;
+}
+
+.preamble {
+  display: grid; 
   grid-template-columns: 1fr 1fr;
+  grid-area: preamble;
 }
 .preamble p, .preamble h3 {
   grid-column-start: 2;
 }
 
-.summary {
-  grid-column-start: 1;
+#zen-supporting {
+  /*display: grid;*/
+  grid-area: zen-supporting;
 }
+
 
 .explanation {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-area: explanation;
 }
 .explanation p, .explanation h3 {
   grid-column-start: 1;
@@ -23,49 +90,89 @@
 .participation {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-area: participation;
 }
 .participation p, .participation h3 {
   grid-column-start: 2;
 }
 
 .benefits {
+  display: grid;
   grid-column-start: 1;
   grid-row-start: 4;
+  grid-area: benefits;
 }
 
 .requirements {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-area: requirements;
 }
 .requirements p, .requirements h3 {
   grid-column-start: 1;
 }
 
 footer {
+  display: grid;
   grid-column-start: 2;
   grid-row-start: 5;
+  grid-area: footer;
+}
+
+.sidebar {
+  /*display: grid;*/
+  grid-area: sidebar;
 }
 
 .wrapper {
   padding-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-area: wrapper;
   align-items: center;
 }
 
+/*.design-selection {
+  grid-area: design-selection;
+}
+
+.design-archives {
+  grid-area: design-archives;
+}
+
+.zen-resources {
+  grid-area: zen-resources;
+}
+
+.extra1 {
+  display: grid;
+  grid-area: extra1;
+}
+
+.extra4 {
+  display: grid;
+  grid-area: extra4;
+}*/
+
 .preamble {
+  display: grid;
+  grid-area: tree;
   background-image: url(palm-tree.svg);
   background-repeat: no-repeat;
   background-position-x: 18%;
 }
 
 .explanation {
+  display: grid;
+  grid-area: shell;
   background-image: url(seashell.svg);
   background-position-x: 80%;
   background-repeat: no-repeat;
 }
 
 .participation {
+  display: grid;
+  grid-area: ship;
   background-image: url(Ship.svg);
   background-repeat: no-repeat;
   background-size: 200px 200px;
@@ -77,9 +184,11 @@ footer {
 }
 
 .requirements {
+  display: grid;
+  grid-area: chest;
   background-image: url(treasure-chest.svg);
   background-repeat: no-repeat;
-  background-position-x: 80%;
+  background-position-x: 140%;
 }
 
 @keyframes rocking {
@@ -149,3 +258,68 @@ footer {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/*@media screen and (max-device-width:640px), screen and (max-width:640px) {
+ {
+  Width: 100%!important;
+  
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  /*grid-template-rows: minmax(100px, auto);*/
+ /* grid-template-areas: 
+    intro intro
+    tree explanation
+    sidebar participation
+    sidebar shell
+    benefits
+    requirements chest
+    footer footer
+    design-selection design-archives 
+    zen-resources
+    extra1 extra1
+    extra4 extra4;*/
+    
+   /* .preamble, .explanation, .participation, .benefits, .requirements {
+      display: inline-block;
+      height: 150px;
+      padding-top: 100px;
+      border-radius: 100%;
+    }
+
+    .participation {
+      background-image: none;
+      background-repeat: no-repeat;
+    }
+  
+  }
+
+
+@media only screen and (max-width: 414px) {
+    
+    
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  /*grid-template-areas: 
+    intro
+    tree 
+    explanation
+    sidebar 
+    participation
+    benefits
+    requirements 
+    chest
+    footer 
+    design-selection 
+    design-archives 
+    zen-resources
+    extra1
+    extra4;*/
+
+   /* justify-content: center;
+
+
+    .explanation, .participation {
+      background-image: none;
+      background-repeat: no-repeat;
+    }
+      }*/
