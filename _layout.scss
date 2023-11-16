@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Waterfall&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url("sansation_light.woff");
+
 
 @mixin left() {
     display: grid;
@@ -14,6 +18,34 @@ p, h3 {
 }
 }
 // layout for the introduction
+
+h1, h2, h3 {
+    font-family: "Waterfall", cursive;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 80px;
+  }
+  h2 {
+    font-size: 60px;
+  }
+  
+  h3 {
+    font-size: 40px;
+  }
+  
+  a, p {
+    text-align: center;
+    font-size: 20px;
+    font-family: Prata;
+  }
+
+body {	
+	background: linear-gradient(to bottom, #0b80db, #7fa7c6, #014274);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
 
 .preamble {
 @include left;

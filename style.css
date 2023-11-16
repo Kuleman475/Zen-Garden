@@ -1,35 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Waterfall&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 @import url("sansation_light.woff");
-
-/** {
-  display: block;
-  padding: 1rem;
-}
-
-/** {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: minmax(100px, auto);
-  /*grid-template-areas: 
-    intro intro intro
-    sidebar tree explanation
-    sidebar participation shell
-    sidebar ship benefits
-    sidebar requirements chest
-    footer footer footer
-    design-selection design-archives zen-resources
-    extra1 extra1 extra1
-    extra4 extra4 extra4
-  ;
-}*/
-
-body {	
-	background: linear-gradient(to bottom, #0b80db, #7fa7c6, #014274);
-	background-size: 100%;
-	background-repeat: no-repeat;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Waterfall&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import url("sansation_light.woff");
 h1, h2, h3 {
   font-family: "Waterfall", cursive;
   text-align: center;
@@ -38,6 +11,7 @@ h1, h2, h3 {
 h1 {
   font-size: 80px;
 }
+
 h2 {
   font-size: 60px;
 }
@@ -52,36 +26,27 @@ a, p {
   font-family: Prata;
 }
 
-.intro {
-  /*display: grid;*/
-  grid-area: intro;
-}
-
-.summary {
-  display: grid;
-  grid-column-start: 1;
-  grid-area: summary;
+body {
+  background: linear-gradient(to bottom, #0b80db, #7fa7c6, #014274);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .preamble {
-  display: grid; 
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-area: preamble;
 }
 .preamble p, .preamble h3 {
   grid-column-start: 2;
 }
 
-#zen-supporting {
-  /*display: grid;*/
-  grid-area: zen-supporting;
+.summary {
+  grid-column-start: 1;
 }
-
 
 .explanation {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-area: explanation;
 }
 .explanation p, .explanation h3 {
   grid-column-start: 1;
@@ -90,89 +55,49 @@ a, p {
 .participation {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-area: participation;
 }
 .participation p, .participation h3 {
   grid-column-start: 2;
 }
 
 .benefits {
-  display: grid;
   grid-column-start: 1;
   grid-row-start: 4;
-  grid-area: benefits;
 }
 
 .requirements {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-area: requirements;
 }
 .requirements p, .requirements h3 {
   grid-column-start: 1;
 }
 
 footer {
-  display: grid;
   grid-column-start: 2;
   grid-row-start: 5;
-  grid-area: footer;
-}
-
-.sidebar {
-  /*display: grid;*/
-  grid-area: sidebar;
 }
 
 .wrapper {
   padding-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-area: wrapper;
   align-items: center;
 }
 
-/*.design-selection {
-  grid-area: design-selection;
-}
-
-.design-archives {
-  grid-area: design-archives;
-}
-
-.zen-resources {
-  grid-area: zen-resources;
-}
-
-.extra1 {
-  display: grid;
-  grid-area: extra1;
-}
-
-.extra4 {
-  display: grid;
-  grid-area: extra4;
-}*/
-
 .preamble {
-  display: grid;
-  grid-area: tree;
   background-image: url(palm-tree.svg);
   background-repeat: no-repeat;
   background-position-x: 18%;
 }
 
 .explanation {
-  display: grid;
-  grid-area: shell;
   background-image: url(seashell.svg);
   background-position-x: 80%;
   background-repeat: no-repeat;
 }
 
 .participation {
-  display: grid;
-  grid-area: ship;
   background-image: url(Ship.svg);
   background-repeat: no-repeat;
   background-size: 200px 200px;
@@ -184,11 +109,9 @@ footer {
 }
 
 .requirements {
-  display: grid;
-  grid-area: chest;
   background-image: url(treasure-chest.svg);
   background-repeat: no-repeat;
-  background-position-x: 140%;
+  background-position-x: 80%;
 }
 
 @keyframes rocking {
@@ -256,70 +179,66 @@ footer {
     background-position: 0% 100%;
   }
 }
+@media screen and (max-device-width: 1000px), screen and (max-width: 1000px) {
+  .preamble {
+    background-image: url(palm-tree.svg);
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    display: block;
+    padding-top: 90%;
+    /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 550px; */
+  }
+  .participation {
+    background-image: none;
+    display: block;
+  }
+  .requirements {
+    background-image: url(treasure-chest.svg);
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    display: block;
+    padding-bottom: 100%;
+  }
+  .explanation {
+    background-image: none;
+    display: block;
+  }
+  .wrapper {
+    display: block;
+  }
+  .design-selection ul li {
+    display: grid;
+    grid-template-columns: 1fr 25px 1fr;
+    column-gap: 0px;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    padding-top: 20px;
+  }
+  .design-selection .designer-name {
+    font-size: 20px;
+    font-style: italic;
+    margin: 0;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+  }
+  .design-selection ul li a {
+    font-size: 20px;
+  }
+  .design-archives ul li {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-right: 25px;
+  }
+  .zen-resources ul li {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-right: 25px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
-
-/*@media screen and (max-device-width:640px), screen and (max-width:640px) {
- {
-  Width: 100%!important;
-  
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr;
-  /*grid-template-rows: minmax(100px, auto);*/
- /* grid-template-areas: 
-    intro intro
-    tree explanation
-    sidebar participation
-    sidebar shell
-    benefits
-    requirements chest
-    footer footer
-    design-selection design-archives 
-    zen-resources
-    extra1 extra1
-    extra4 extra4;*/
-    
-   /* .preamble, .explanation, .participation, .benefits, .requirements {
-      display: inline-block;
-      height: 150px;
-      padding-top: 100px;
-      border-radius: 100%;
-    }
-
-    .participation {
-      background-image: none;
-      background-repeat: no-repeat;
-    }
-  
-  }
-
-
-@media only screen and (max-width: 414px) {
-    
-    
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: minmax(100px, auto);
-  /*grid-template-areas: 
-    intro
-    tree 
-    explanation
-    sidebar 
-    participation
-    benefits
-    requirements 
-    chest
-    footer 
-    design-selection 
-    design-archives 
-    zen-resources
-    extra1
-    extra4;*/
-
-   /* justify-content: center;
-
-
-    .explanation, .participation {
-      background-image: none;
-      background-repeat: no-repeat;
-    }
-      }*/
