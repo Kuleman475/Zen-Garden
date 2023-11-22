@@ -74,8 +74,13 @@ body {
 }
 
 footer {
-  grid-column-start: 2;
-  grid-row-start: 5;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) 5fr;
+}
+footer a {
+  text-align: center;
+  text-decoration: none;
+  color: #FFD59D;
 }
 
 .wrapper {
@@ -83,6 +88,59 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
+}
+
+.design-selection ul li {
+  display: grid;
+  grid-template-columns: 1fr 25px 1fr;
+  column-gap: 0px;
+  font-size: 20px;
+  color: #FFD59D;
+  text-align: left;
+  text-decoration: none;
+  padding-top: 20px;
+}
+
+.design-selection .designer-name {
+  font-size: 20px;
+  font-style: italic;
+  margin: 0;
+  color: #FFD59D;
+  text-align: left;
+  text-decoration: none;
+}
+
+.design-selection .design-name {
+  text-decoration: none;
+  color: white;
+}
+
+.design-selection ul li a {
+  font-size: 20px;
+}
+
+.design-archives ul li {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-right: 25px;
+}
+
+.design-archives ul li a {
+  text-decoration: none;
+  padding-top: 15px;
+  color: white;
+}
+
+.zen-resources ul li {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-right: 25px;
+}
+
+.zen-resources ul li a {
+  padding-top: 15px;
+  text-decoration: none;
+  color: white;
 }
 
 .preamble {
@@ -93,7 +151,8 @@ footer {
 
 .explanation {
   background-image: url(seashell.svg);
-  background-position-x: 80%;
+  background-position-x: 90%;
+  background-size: 500px;
   background-repeat: no-repeat;
 }
 
@@ -111,7 +170,8 @@ footer {
 .requirements {
   background-image: url(treasure-chest.svg);
   background-repeat: no-repeat;
-  background-position-x: 80%;
+  background-size: 50%;
+  background-position-x: 90%;
 }
 
 @keyframes rocking {
@@ -198,6 +258,7 @@ footer {
     background-image: url(treasure-chest.svg);
     background-repeat: no-repeat;
     background-position-y: 100%;
+    background-size: 100%;
     display: block;
     padding-bottom: 100%;
   }
@@ -208,12 +269,23 @@ footer {
   .wrapper {
     display: block;
   }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  footer a {
+    padding-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFD59D;
+  }
   .design-selection ul li {
     display: grid;
     grid-template-columns: 1fr 25px 1fr;
     column-gap: 0px;
     font-size: 20px;
-    color: white;
+    color: #FFD59D;
     text-align: left;
     text-decoration: none;
     padding-top: 20px;
@@ -222,7 +294,7 @@ footer {
     font-size: 20px;
     font-style: italic;
     margin: 0;
-    color: white;
+    color: #FFD59D;
     text-align: left;
     text-decoration: none;
   }

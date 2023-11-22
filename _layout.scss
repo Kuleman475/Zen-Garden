@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @import url("https://fonts.googleapis.com/css2?family=Waterfall&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 @import url("sansation_light.woff");
@@ -73,8 +75,13 @@ body {
     @include right;
 }
 footer {
-    grid-column-start: 2;
-    grid-row-start: 5;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) 5fr;
+    a{
+    text-align: center;
+    text-decoration: none;
+    color: $color-complement-1;
+    }
 }
 
 .wrapper {
@@ -82,5 +89,56 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+}
+
+.design-selection ul li {
+  display: grid;
+  grid-template-columns: 1fr 25px 1fr;
+  column-gap: 0px;
+    font-size: 20px;
+    color: $color-complement-1;
+    text-align: left;
+    text-decoration: none;
+    padding-top: 20px;
+
+}
+.design-selection .designer-name{
+font-size: 20px;
+font-style: italic;
+margin: 0;
+color: $color-complement-1;
+text-align: left;
+text-decoration: none;
+}
+.design-selection .design-name{
+  text-decoration: none;
+color: white;
+}
+.design-selection ul li a{
+  font-size: 20px;
+  
+}
+.design-archives ul li {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-right: 25px;
+
+}
+.design-archives ul li a {
+  text-decoration: none;
+  padding-top: 15px;
+  color: white;
+}
+.zen-resources ul li {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-right: 25px;
+
+}
+
+.zen-resources ul li a {
+  padding-top: 15px;
+  text-decoration: none;
+  color: white;
 }
 
