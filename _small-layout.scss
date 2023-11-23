@@ -1,6 +1,6 @@
 @use "variables" as *;
 
-@media screen and (max-device-width:1000px), screen and (max-width:1000px) {
+@media screen and (max-width:1000px) {
     .preamble{
       background-image: url(palm-tree.svg);
       background-repeat: no-repeat;
