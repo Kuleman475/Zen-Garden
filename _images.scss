@@ -8,7 +8,8 @@
 
 .explanation {
     background-image: url(seashell.svg);
-    background-position-x: 80%;
+    background-position-x: 90%;
+    background-size: 500px;
     background-repeat: no-repeat;
 }
 .participation {
@@ -24,7 +25,8 @@
 .requirements {
     background-image: url(treasure-chest.svg);
     background-repeat: no-repeat;
-    background-position-x: 80%;
+    background-size: 50%;
+    background-position-x: 90%;
 }
 
 @keyframes rocking {

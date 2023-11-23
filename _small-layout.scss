@@ -1,0 +1,77 @@
+@use "variables" as *;
+
+@media screen and (max-device-width:1000px), screen and (max-width:1000px) {
+    .preamble{
+      background-image: url(palm-tree.svg);
+      background-repeat: no-repeat;
+      background-position-x: 80%;
+      display: block;
+      padding-top: 90%;
+      /* display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 550px; */
+    }
+    .participation {
+      background-image: none;
+      display: block;
+  }
+  .requirements {
+    background-image: url(treasure-chest.svg);
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-size: 100%;
+    display: block;
+    padding-bottom: 100%;
+  }
+  .explanation {
+    background-image: none;
+    display: block;
+  }
+  .wrapper {
+    display: block;
+  }
+  footer {
+display: grid;
+grid-template-columns: 1fr;
+padding: 0;
+  a {
+    padding-bottom: 20px;
+    text-align: center;
+      text-decoration: none;
+      color: $color-complement-1;
+  }
+  }
+  .design-selection ul li {
+    display: grid;
+    grid-template-columns: 1fr 25px 1fr;
+    column-gap: 0px;
+      font-size: 20px;
+      color: $color-complement-1;
+      text-align: left;
+      text-decoration: none;
+      padding-top: 20px;
+  
+  }
+  .design-selection .designer-name{
+  font-size: 20px;
+  font-style: italic;
+  margin: 0;
+  color: $color-complement-1;
+  text-align: left;
+  text-decoration: none;
+  }
+  .design-selection ul li a{
+    font-size: 20px;
+    
+  }
+  .design-archives ul li {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-right: 25px;
+  }
+  .zen-resources ul li {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-right: 25px;
+  }
+  }
